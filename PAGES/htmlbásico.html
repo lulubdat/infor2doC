@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML básico</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+</head>
+<body>
+<div class="teoria">
+    <ul>
+        <h1>Teoría</h1>
+        <li>¿Qué es VS CODE?</li>
+        <p>Es un editor de código</p>
+        <li>¿Qué es un editor de código?</li>
+        <p>Es un programa que permite escribir y editar código fuente en un lenguaje de programación. Los programadores y desarrolladores lo utilizan para crear y probar aplicaciones informáticas, sitios web y sistemas operativos. </p>
+        <li>¿Cómo creo las carpetas?</li>
+        <p>Al abrir la app tenes que poner "file" y luego ir a "open folder" y de ahí seleccionar la carpeta ya creada o crearla poniendo "Nueva Carpeta", ese sera el repositorio/carpeta principal donde se trabajará</p>
+        <li>¿Que es "file" y "folder"?</li>
+        <p>"File" significa archivo y son las cosas sueltas dentro de la carpeta principal como el "index.html", y "Folder" significa carpeta. Existen varias carpetas adentro de la carpeta principal.</p>
+        <li>¿Cuáles son esas carpetas?</li>
+        <p>La principal en este caso se llama "Infor2doC" y las que estan adentro de esta(la que se ven a la izquierda de la app) tienen un nombre predeterminado por el profe que son
+        <ol>
+            <li>CSS</li>
+            <li>Multimedia</li>
+            <li>Pages</li>
+        </ol>
+        Y adentro de estas carpetas se colocan files/archivos como style.css(en CSS), las imagenes en Multimedia y los otros html en Pages(ej: login.html). El unico archivo que va suelto(según lo que pide el profe) es "Index.html"
+        </p>
+        <li>¿Qué es HTML?</li>
+        <p>Es un lenguaje de programación que se utiliza para crear y estructurar páginas web. Se basa en etiquetas y atributos para definir cómo se muestran los elementos de una página en un navegador web.</p>
+        <li>¿Qué es CSS?</li>
+        <p>CSS son las siglas de Cascading Style Sheets, que en español significa Hojas de Estilo en Cascada. Es un lenguaje de diseño gráfico que se utiliza para definir la apariencia de las páginas web. 
+        </p>
+    </ul>
+</div>
+<div class="p">
+    <h1>Párrafos</h1>
+    <p>La etiqueta de esta es "p" y sirve para poder escribir en html literalmente un párrafo</p>
+</div>
+<div class="lists">
+    <h1>Listas</h1>
+    <p>Las listas estan dividas en la ordenada(ol) y la desordenada(ul). La ordenada es la que aparece numerada, que te puede servir a la hora de hacer un ranking:
+        <ol>
+            <h2>Ejemplo: Mejores cómidas</h2>
+            <li>Pasta</li>
+            <li>Milanesas</li>
+            <li>Empanadas</li>
+        </ol>
+        En cambio la desordenada aparece con viñetas/bullets y puede servir por ejemplo para la lista del super:
+        <ul>
+            <h2>Ejemplo: Lista Super</h2>
+            <ul>
+                <li>Mayonesa</li>
+                <li>Yerba</li>
+                <li>Canela</li>
+            </ul>
+        </ul>
+        Por último otra variante es hacer listas dentro de otras listas donde podes hacer que la lista ordenada este adentro de una desordenada:
+        <ul>
+            <li>Lista desordenada
+                <ol>
+                    <li>Lista ordenada adentro de la desordenada</li>
+                </ol>
+            </li>
+        </ul>
+        o al reves
+        <ol>
+            <li>Lista ordenada
+                <ul>
+                    <li>Lista desordenada adentro de la ordenada</li>
+                </ul>
+            </li>
+        </ol>
+        Esto se logra abriendo la lista(ul o ol) y colocando una list(li) y adentro de esta etiqueta colocar la otra lista(ul o ol)
+    </p>
+</div>
+<div class="enlaces">
+    <h1>Enlaces</h1>
+    <h4>Los enlaces son lo que nos ayuda a navegar de archivo en archivo y su etiqueta es "a"</h4>
+    <p>Se utilizan 2 maneras de enlazar
+        <ol>
+            <li>Enlazar entre archivos de la página</li>
+            <li>Enlazar con links externos</li>
+        </ol>
+    </p>
+    <ol>
+        <li>Archivos de la web:
+            <p>Para enlazar con estos solo se tiene que utilizar la etiqueta "a"  y en la parte entre comillas de "href"(que significa referencia de hypertexto) vas a poner la carpeta donde queres que se enlaze usando "./nombredelacarpeta" o si estas en un archivo adentro de la carpeta "pages" vas a usar "../nombredelacarpeta" y en la parte entre "><" vas a poner el nombre del archivo donde vas a entrar(ejemplo en index ponés Home)</p>
+            <ul>
+                <li>Como se ve en Html:</li>
+                <img src="../MULTIMEDIA/a.png" alt="">
+                <li>Como se ve en la web:</li>
+                <a href="../index.html">Home</a>
+            </ul>
+            <p>Se puede sacarle la linea de abajo en css usando "text-decoration-line: none;", como hice en la página de entrada de esta web(que tmb le puse el color blanco a las letras de enlaces) Y otra data es que para que te quede el link dentro de una viñeta, en una lista, se pone el el "a" adentro del "li" y se escribe en la parte del enlace, no de la lista, pq sino te aparece como enlace
+                <img src="../MULTIMEDIA/aa.png" alt="">
+                De esta forma
+            </p>
+        </li>
+        <li>Archivos por fuera de la web:
+            <p>Se reemplaza en vez de colocar lo de la carpeta, el link de lo que queres que se enlace, por ejemplo a google y para que este enlace se abra en otra pestaña se coloca el "target="_blank" después de href:</p>
+            <ul>
+            <li>Como se ve en html:</li>
+            <img src="../MULTIMEDIA/enlace.png" alt="">
+            <li>Como se ve en la web:</li>
+            <a href="https://www.google.com/?hl=es" target="_blank">Google</a>
+           </ul>
+        </li>
+    </ol>
+</div>
+<div class="div">
+    <h1>Div Class</h1>
+    <p>Div es una etiqueta que sirve para discriminar/dividir/separar/diferenciar cada cosa. El profe la mostro varias veces como cajita pero sirve para diferenciar por temas por ejemplo(como estuve haciendo) y configurar el diseño por separado. El truco del div class, es la etiqueta "class" que se pone adentro de la etiqueta de apertura de Div y se le pone un nombre único para a la hora de configurar qsy el color en style.css solo se configure lo seleccionado(como estuve haciendo en estos). En lo personal me gusta usar directo el class, ya que podes poner directo en la etiqueta el class para diferenciarlo o usar el nombre de la etiqueta directo en style pero tmb sirve para cuando queres diferencias varias etiquetas juntas de un mismo color, como estuve haciendo acá</p>
+    <h2>Ejemplo de cajita</h2>
+    <div class="caja">
+        Cajita
+    </div>
+
+</div>
+
+</body>
+</html>

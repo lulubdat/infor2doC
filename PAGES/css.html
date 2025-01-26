@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+</head>
+<body class="body">
+    <h1 class="t">CSS</h1>
+    <h3>Primero tenes que saber como linkear css a tu archivo que se hace con "link rel="stylesheet"href="""</h3>
+    <li>En la parte de "href" se coloca "./CSS/Style.css" si es que estas en index o en un archivo suelto; y si estas adentro de una carpeta(por ejemplo en pages) se usa "../CSS/Style.css"</li>
+    <p>Para configurar todo esto de los colores y tamaños se hace en el archivo style.css y por lo que enseño el profe se divide en 2 maneras de hacerlo: con Class o directo con el nombre de la etiqueta
+        <ol>
+            <li>Con Class:
+                <p>Imaginate que estas hablando del wandagate y queres diferenciar por color cuando hablas de wanda, de icardi o de la china pero usaste las mismas etiquetas para cada uno(h1, p, listas) entonces para poder diferenciar por "cajitas" vas a crear un "Div class" para cada personaje(si es que escribiste ordenadamente de cada uno) entonces ahí si te sirve usar un div class</p>
+                <img src="../MULTIMEDIA/ejemplo1.png" alt="ejemplo">
+                <p>                <p>Y se cambia en css empezando con un "." y luego el nombre puesto al class, seguido de {}</p></p>
+            </li>
+            <li>Con el mismo nombre de etiqueta:
+                <p>Sirve cuando por ejemplo tenes que poner todos los titulos(h1) en color rojo, y se cambia en css directamente poniendo el nombre de la etiqueta seguido de {}</p>
+            </li>
+        </ol>
+    </p>
+
+    <h2 class="t1">JUSTIFY CENTER, MARGIN</h2>
+    <p>Estás son las etiquetas que más usamos con Christian</p>
+    <ol>
+        <li>"Justify-content: center" nos sirve para colocar todo el contenido(ya sea un párrafo, titulo, imagén o cajita) en el centro de la página web</li>
+        <li>"Margin: auto" Margin(margen) es la cantidad de pixeles(la medición que se usa aca), o se puede medir con %, que distancian en total entre la altura(top), la izquierda(left), la derecha(rigth), y el final de la página(buttom). Este margin automatico nos sirve para que se configure predeterminadamente </li>
+        <li>"Margin-top:50px" lo recomiendo usar para cuando el profe pide ponerle color al nav y centrarlo de tal manera y bla bla.</li>
+    </ol>
+    <p class="ej">EJEMPLO DE ETIQUETA CONFIGURADA CON LAS MENCIONADAS ANTERIORMENTE</p>
+    <h2 class="t2">HEIGHT Y WIDTH</h2>
+    <ul>
+    <li>"Height" Es la altura y nos sirve para configurar el tamaño de imagenes, cajitas, etc</li>
+    <li>"Width" Es el ancho, y estos 2 se pueden medir por pixeles o por %</li>
+    <div class="cajita2">
+        <p>Ejemplo de caja tamaño 100pixeles x 100px, de color rojo</p>
+    </div>
+    </ul>
+    <h2 class="t3">Colores</h2>
+    <p>Para ponerle color a las etiquetas existen 2 formas, dandole el color a la letra y dandole color al fondo</p>
+    <ul>
+        <li>"Background-color" el color de fondo, sirve para las cajas, o el fondo de la página web</li>
+        <li>"Color" para cambiarle color a las letras</li>
+    </ul>
+    <h2 class="t4">Estilo de letra y backgrounds</h2>
+    <p>Para cambiarle el estilo de letra se usa el "font-family"</p>
+    <p>Y para ponerle una imagén de fondo recomiendo usar "background-image: url()"y colocar el link de la foto(tiene que ser un link online) y luego usar "background-repeat: no-repeat;" para que la imagén no se repetia 80 veces y quede solo 1 vez, y el "background-size: cover;" para que cubra todo el tamaño de la página</p>
+    <h2 class="t5">Hover</h2>
+    <p>Es un efecto que con el profe lo usamos para que cuando pasemos el cursor arriba de por ejemplo: el menu, aparezcan submenus. Tambien se puede hacer que cuando pases el cursor por arriba de ej: un titulo, este cambie de color y así varias cosas más.</p>
+    <ul>
+        <li>¿Cómo se usa?</li>
+        <ol>
+            <li>Para hacer submenús:
+                <p>Se crea la lista adentro de otra lista(como mostré en la parte de listas de html) y luego en "style.css" hay que hacer dos cosas; primero colocar el "display:none;" y luego el hover "display:block;"</p>
+                <p>Para hacer esto primero hay que entender que para hacer estos cambios se va a usar en css directamente el nombre de las etiquetas(ul, ol, li) y que se utilizara el ">" que significa "adentro de" entonces si queremos que el "display:none;"(propiedad de CSS que oculta elementos), es decir, ocultar los submenú tendremos que en el caso del ejemplo(y del que usamos siempre con el profe) poner "ul>li>ul>li{ display: none;}" que significa que la lista que esta adentro de la viñeta "Menú" que esta adentro de una lista desordenada va a ocultarse.
+                </p>
+                <p>Luego el segúndo paso será hacer que esa misma lista que ocultamos cuando pasemos el cursos aparezca y ahí es donde entra "hover" en el juego. Le tenemos que volver a decir a css que la lista adentro de la viñeta adentro de una lista desordenada se disperse en bloque(o sea el "display: block;") pero esta vez se pone diferente y se le suma el hover a la viñeta donde se desprende los submenús, "ul li:hover>ul li{ display: block;}" que significa que la lista de la lista desordenada que esta abajo de la viñeta que tiene  hover que esta adentro de la lista desordenada principal va a verse cuando pase el cursos/mouse por encima.</p>
+                    <p>Así se ve en CSS</p>
+                    <img src="../MULTIMEDIA/hover.png" alt="">
+                    <p>Así se vería en html</p>
+                    <img src="../MULTIMEDIA/Captura de pantalla 2025-01-26 153552.png" alt="">
+                <p>Así se ve en la web:</p>
+                <ul>
+                    <li>Menú
+                        <ul>
+                            <li>Submenú</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Para cambiar el color:
+                <ul>
+                    <li>Si querés que el color de un titúlo(en este caso use el h6, y recuerden que hay de h1 a h6, lo unico que va cambiando es el tamaño, pero es una manera de usar titulos y subtitulos con un estilo ya predeterminado por el vs code) cambie al pasar el cursor es más facil, solo hay que ponerle el nombre de la etiqueta y ":hover" y poner "color" y el color que querés(tmb se puede con el tamaño, estilo de letra, etc prueben con lo que les guste)
+                            <p>Así se ve en css:</p>
+                            <img src="../MULTIMEDIA/h6.png" alt="">
+                            <p>Así en html:</p>
+                            <img src="../MULTIMEDIA/ej.png" alt="">
+                            <p>Así en la web:</p>
+                            <h6>El ejemplo</h6>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </ul>
+</body>
+</html>
+
+
+
